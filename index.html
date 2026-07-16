@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+        .logo {
+            font-size: 90px;
+            font-weight: bold;
+            font-family: 'Product Sans', Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+        .g-b { color: #4285F4; }
+        .g-r { color: #EA4335; }
+        .g-y { color: #FBBC05; }
+        .g-g { color: #34A853; }
+        
+        .search-box {
+            width: 580px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            outline: none;
+            box-shadow: none;
+            transition: 0.2s;
+        }
+        .search-box:hover, .search-box:focus {
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+            border-color: rgba(223,225,229,0);
+        }
+        .buttons {
+            margin-top: 25px;
+        }
+        button {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 10px 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            border: 1px solid #dadce0;
+            color: #202124;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        <span class="g-b">G</span><span class="g-r">o</span><span class="g-y">o</span><span class="g-b">g</span><span class="g-g">l</span><span class="g-r">e</span>
+    </div>
+
+    <form id="prankForm" onsubmit="runPrank(event)">
+        <input type="text" id="searchBar" class="search-box" autocomplete="off" placeholder="">
+        <div class="buttons">
+            <button type="submit">Google Search</button>
+            <button type="button" onclick="runPrank(event)">I'm Feeling Lucky</button>
+        </div>
+    </form>
+
+    <script>
+        function runPrank(event) {
+            event.preventDefault(); // Pinipigilan nito ang totoong pag-search
+            
+            // PALITAN ANG MENSAHE SA IBABA KUNG ANONG GUSTO MONG LUMABAS NA PRANK
+            alert("⚠️ WARNING: Ang computer mo ay na-hack ng iyong kaibigan! Joke lang, na-prank ka lang. 😂");
+            
+            // Opsyonal: Pwede mo rin silang i-redirect sa nakakatawang video pagkatapos ng alert
+            // window.location.href = "https://youtube.com"; 
+        }
+    </script>
+
+</body>
+</html>
